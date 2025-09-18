@@ -1,5 +1,4 @@
-asso 1 – Declarando variáveis
-// Nome da cantina
+// Nome da cantina //
 var nomeCantina = "Cantina da Escola";
 console.log("Bem-vindo à " + nomeCantina);
 
@@ -10,15 +9,13 @@ console.log("Temos " + salgados + " salgados disponíveis.");
 // Preço fixo do salgado
 const precoSalgado = 5;
 console.log("Cada salgado custa R$" + precoSalgado);
-Passo 2 – Atualizando valores
 // Atualizando o número de salgados e calculando quanto foi vendido
 salgados = salgados - 5;
 let totalVendido = 5 * precoSalgado;
 
 console.log("Agora restam " + salgados + " salgados.");
 console.log("A cantina vendeu R$" + totalVendido);
-Passo 3 – Teste rápido
-Aqui vamos explorar o comportamento de var, let e const.
+
 
 // Testando alteração do preço do salgado (const não pode ser alterado)
 try {
