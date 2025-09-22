@@ -16,6 +16,34 @@ let totalVendido = 5 * precoSalgado;
 console.log("Agora restam " + salgados + " salgados.");
 console.log("A cantina vendeu R$" + totalVendido);
 
+// Quantidade de salgados disponíveis
+let salgados = 20;
+console.log("Temos " + salgados + " salgados disponíveis.");
+
+// Preço fixo do salgado
+const precoSalgado = 5;
+console.log("Cada salgado custa R$" + precoSalgado);
+// Atualizando o número de salgados e calculando quanto foi vendido
+salgados = salgados - 5;
+let totalVendido = 5 * precoSalgado;
+
+console.log("Agora restam " + salgados + " salgados.");
+console.log("A cantina vendeu R$" + totalVendido);
+
+// Quantidade de salgados disponíveis
+let salgados = 20;
+console.log("Temos " + salgados + " salgados disponíveis.");
+
+// Preço fixo do salgado
+const precoSalgado = 5;
+console.log("Cada salgado custa R$" + precoSalgado);
+// Atualizando o número de salgados e calculando quanto foi vendido
+salgados = salgados - 5;
+let totalVendido = 5 * precoSalgado;
+
+console.log("Agora restam " + salgados + " salgados.");
+console.log("A cantina vendeu R$" + totalVendido);
+
 
 // Testando alteração do preço do salgado (const não pode ser alterado)
 try {
