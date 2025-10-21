@@ -66,3 +66,17 @@ try {
 } catch (error) {
   console.log("Erro ao acessar testeLet: " + error.message);
 }
+
+  <script>
+  {
+    function openMenu(day) 
+      const contents = document.querySelectorAll('.menu-content');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      contents.forEach(c => c.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
+
+      document.getElementById(day).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
