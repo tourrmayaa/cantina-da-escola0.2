@@ -1,65 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Pessoal - Início</title>
+    <title>Seu Nome - Portfólio Pessoal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <nav class="navbar">
-            <span class="logo">Meu Site</span>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="familia.html">Família</a></li>
-                <li><a href="amigos.html">Amigos</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-            </ul>
-            <button id="theme-toggle">🌙 Modo Escuro</button>
+        <nav>
+            <h1>Seu Nome</h1>
+            <button id="theme-toggle">Alternar Tema</button>
         </nav>
     </header>
 
-    <main class="container">
-        
-        <section class="card profile-card" id="biografia">
-            <h2>Olá, eu sou [Seu Nome]! 👋</h2>
-            <h3>Uma Breve Biografia</h3>
-            <p>Nascido em [Sua Cidade] e apaixonado por [Seu Hobby Principal], eu trilho um caminho focado em [Sua Área de Atuação/Estudo]. Desde cedo, demonstrei interesse em [Área Específica] e busco sempre aprender e inovar.</p>
-            <p>Acredito que a combinação de [Habilidade 1] e [Habilidade 2] é a chave para a resolução de problemas complexos. Quando não estou trabalhando, você pode me encontrar [O que você faz no tempo livre].</p>
-            <div class="card-footer">
-                <a href="#projetos" class="btn">Ver Projetos</a>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Olá, eu sou **[Seu Nome Aqui]**</h2>
+                <p>Desenvolvedor(a) Web | Designer | [Sua Profissão]</p>
+                <a href="#about" class="button primary">Saiba Mais</a>
             </div>
+            </section>
+
+        <section id="about">
+            <h3>Sobre Mim</h3>
+            <p>Escreva um breve parágrafo sobre sua experiência, habilidades e o que você faz. Mantenha conciso e envolvente!</p>
         </section>
 
-        ---
-
-        <section class="projects-section" id="projetos">
-            <h2>Projetos Recentes 🚀</h2>
-            
-            <div class="gallery">
-                <article class="card project-card">
-                    <h3>Projeto Alpha: [Nome do Projeto]</h3>
-                    <p>Desenvolvimento de um sistema de [Tipo de Sistema] utilizando **HTML**, **CSS** e **JavaScript** para otimizar [O que otimiza].</p>
-                    <a href="link-do-projeto-ou-github" class="btn btn-small" target="_blank">Ver Código/Demo</a>
-                </article>
-
-                <article class="card project-card">
-                    <h3>Projeto Beta: [Outro Nome]</h3>
-                    <p>Criação de um [Tipo de Aplicativo] focado em [Propósito] com foco total em **UX/UI** e acessibilidade.</p>
-                    <a href="link-do-projeto-ou-github" class="btn btn-small" target="_blank">Ver Código/Demo</a>
-                </article>
-                
-                </div>
+        <section id="skills">
+            <h3>Habilidades</h3>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>[Habilidade 3]</li>
+                <li>[Habilidade 4]</li>
+            </ul>
         </section>
 
+        <section id="contact">
+            <h3>Contato</h3>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="button primary">Enviar Mensagem</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 - Meu Site Pessoal</p>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
