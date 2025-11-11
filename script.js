@@ -1,82 +1,33 @@
-// Nome da cantina //
-var nomeCantina = "Cantina da Escola";
-console.log("Bem-vindo à " + nomeCantina);
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
 
-// Quantidade de salgados disponíveis
-let salgados = 20;
-console.log("Temos " + salgados + " salgados disponíveis.");
-
-// Preço fixo do salgado
-const precoSalgado = 5;
-console.log("Cada salgado custa R$" + precoSalgado);
-// Atualizando o número de salgados e calculando quanto foi vendido
-salgados = salgados - 5;
-let totalVendido = 5 * precoSalgado;
-
-console.log("Agora restam " + salgados + " salgados.");
-console.log("A cantina vendeu R$" + totalVendido);
-
-// Quantidade de salgados disponíveis
-let salgados = 20;
-console.log("Temos " + salgados + " salgados disponíveis.");
-
-// Preço fixo do salgado
-const precoSalgado = 5;
-console.log("Cada salgado custa R$" + precoSalgado);
-// Atualizando o número de salgados e calculando quanto foi vendido
-salgados = salgados - 5;
-let totalVendido = 5 * precoSalgado;
-
-console.log("Agora restam " + salgados + " salgados.");
-console.log("A cantina vendeu R$" + totalVendido);
-
-// Quantidade de salgados disponíveis
-let salgados = 20;
-console.log("Temos " + salgados + " salgados disponíveis.");
-
-// Preço fixo do salgado
-const precoSalgado = 5;
-console.log("Cada salgado custa R$" + precoSalgado);
-// Atualizando o número de salgados e calculando quanto foi vendido
-salgados = salgados - 5;
-let totalVendido = 5 * precoSalgado;
-
-console.log("Agora restam " + salgados + " salgados.");
-console.log("A cantina vendeu R$" + totalVendido);
-
-
-// Testando alteração do preço do salgado (const não pode ser alterado)
-try {
-  precoSalgado = 6; // Isso vai gerar um erro
-} catch (error) {
-  console.log("Erro ao tentar mudar precoSalgado: " + error.message);
-}
-
-// Teste de escopo de var e let
-if (true) {
-  var testeVar = "Sou var"; // var tem escopo global ou de função
-  let testeLet = "Sou let"; // let tem escopo de bloco
-  console.log(testeVar); // funciona
-  console.log(testeLet); // funciona
-}
-
-console.log(testeVar); // funciona porque var é global ou de função
-try {
-  console.log(testeLet); // Gera erro porque let é de escopo de bloco
-} catch (error) {
-  console.log("Erro ao acessar testeLet: " + error.message);
-}
-
-  <script>
-  {
-    function openMenu(day) 
-      const contents = document.querySelectorAll('.menu-content');
-      const buttons = document.querySelectorAll('.tab-btn');
-
-      contents.forEach(c => c.classList.remove('active'));
-      buttons.forEach(b => b.classList.remove('active'));
-
-      document.getElementById(day).classList.add('active');
-      event.target.classList.add('active');
+    // 1. Verificar e aplicar o tema salvo no localStorage
+    // 'localStorage' permite salvar dados pequenos no navegador do usuário
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+        // Atualiza o texto do botão com base no tema salvo
+        themeToggleBtn.textContent = currentTheme === 'dark-mode' ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+    } else {
+        // Se não houver tema salvo, define o padrão como Modo Claro
+        localStorage.setItem('theme', 'light-mode');
+        themeToggleBtn.textContent = '🌙 Modo Escuro';
     }
-  </script>
+
+    // 2. Adicionar o evento de clique ao botão
+    themeToggleBtn.addEventListener('click', () => {
+        // Verifica se o corpo (body) tem a classe 'dark-mode'
+        if (body.classList.contains('dark-mode')) {
+            // Se estiver escuro, muda para claro
+            body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light-mode');
+            themeToggleBtn.textContent = '🌙 Modo Escuro';
+        } else {
+            // Se estiver claro, muda para escuro
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark-mode');
+            themeToggleBtn.textContent = '☀️ Modo Claro';
+        }
+    });
+});
